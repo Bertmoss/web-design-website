@@ -1,0 +1,140 @@
+.hidden {
+  display: none;
+}
+
+.nav__ul {
+  list-style-type: none;
+}
+
+.p-nav__ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.li__a--black {
+  color: #000000;
+  text-decoration: none;
+}
+
+.li__a--white {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+}
+
+.header-div__btn {
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn__span--decoration {
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.btn__span--decoration:nth-child(1) {
+  top: 0px;
+}
+
+.btn__span--decoration:nth-child(2),
+.btn__span--decoration:nth-child(3) {
+  top: 9px;
+}
+
+.btn__span--decoration:nth-child(4) {
+  top: 18px;
+}
+
+.open.header-div__btn .btn__span--decoration:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.open.header-div__btn .btn__span--decoration:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.open.header-div__btn .btn__span--decoration:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.open.header-div__btn .btn__span--decoration:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.header-div--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header__header-div {
+  padding: 20px;
+}
+
+.p-header-div__heading {
+  margin: 0px;
+}
+
+.p-header-div__btn {
+  width: 25px;
+  height: 25px;
+}
+
+.header-div__btn {
+  font-size: 0px;
+  border: none;
+  background-color: inherit;
+}
+
+.p-btn__span--decoration {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+}
+
+.btn__span--decoration {
+  background: #000000;
+  border-radius: 9px;
+}
+
+.header-div__btn.open .btn__span--decoration {
+  background: #FFFFFF;
+}
+
+.header__nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+
+/*# sourceMappingURL=output.css.map */

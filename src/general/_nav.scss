@@ -1,0 +1,25 @@
+@use "./colors" as *;
+
+.nav__ul {
+  list-style-type: none;
+}
+
+.p-nav__ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+@mixin nav-link($color: $black) {
+  color: $color;
+  text-decoration: none;
+
+}
+
+.li__a--black {
+  @include nav-link($color: $black);
+}
+
+.li__a--white {
+  @include nav-link($color: $white);
+}
+

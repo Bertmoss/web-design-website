@@ -1,0 +1,56 @@
+@use "../general/colors" as *;
+@use "../general/hamburger-menu" as *;
+
+.header-div--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header__header-div {
+  padding: 20px;
+}
+
+//items inside of the header
+
+.p-header-div__heading {
+  margin: 0px;
+}
+
+//Hamburger Btn
+
+.p-header-div__btn {
+  width: 25px;
+  height: 25px;
+}
+
+.header-div__btn {
+  @extend %btn--hamburger;
+  font-size: 0px;
+  border: none;
+  background-color: inherit;
+}
+
+.p-btn__span--decoration {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+}
+
+.btn__span--decoration {
+  @extend %span--decoration;
+  background: $black;
+  border-radius: 9px;
+}
+
+.header-div__btn.open .btn__span--decoration {
+  background: $white;
+}
+
+//NAVIGATION
+.header__nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+}
