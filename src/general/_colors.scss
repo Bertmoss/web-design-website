@@ -1,3 +1,16 @@
 
 $black:  #000000;
 $white:  #FFFFFF;
+
+//header
+
+:root {
+  --header-background: #FFFFFF;
+  --header-color: #000000; 
+}
+
+
+.dark {
+  --header-background: #000000;
+  --header-color: #FFFFFF;
+}
