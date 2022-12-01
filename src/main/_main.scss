@@ -1,0 +1,107 @@
+@use "../general/colors" as *;
+
+@mixin flex-column ($gap: 40px) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+main {
+  @include flex-column($gap: 40px);
+}
+
+
+
+
+.main__block {
+  @include flex-column($gap: 10px);
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.block__h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.block__btn {
+  appearance: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: inherit;
+  font-weight: bolder;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.block__p--bold {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+//Portfolio
+
+img {
+  width: 100%;
+}
+
+.main__portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.portfolio__block {
+ @include flex-column($gap: 17px);
+}
+
+.portfolio__link {
+  text-decoration: none;
+  color: $pink;
+  font-weight: 700;
+  position: relative;
+}
+
+//arrow for link
+.portfolio__link::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-image: url("../../images/arrow-right--pink.svg");
+  background-size: cover;
+  left: 125px;
+}
+
+//Latest from Studio
+
+.main__latest-div {
+  background-color: $black;
+  color: $white;
+  @include flex-column($gap: 40px);
+  padding: 30px;
+  position: relative;
+  
+}
+
+.main__latest-div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.latest__block {
+  @include flex-column($gap: 20px);
+}
+
+//Decoration wave
+//extra padding so that the svg doesn't overlap
+
+.main__latest-div div:nth-last-child(2) { 
+  padding-bottom: 50px;
+}
+

@@ -1,0 +1,42 @@
+@use "./colors" as *;
+
+//decoration underline animation
+
+.decoration--underline::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  transform: scaleX(0); 
+  height: 3px;
+  top: 18px;
+  left: 0px;
+  background-color: $pink;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.decoration--underline:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+//decoration wave for the latest-div
+
+.decoration--wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.decoration--wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 46px;
+}
+
+.decoration--wave .shape-fill {
+  fill: #FFFFFF;
+}
