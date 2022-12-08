@@ -1,4 +1,10 @@
 @use "../general/colors" as *;
+@use "../general/decoration" as *;
+
+
+main > * {
+  padding: 0px 30px;
+}
 
 @mixin flex-column ($gap: 40px) {
   display: flex;
@@ -20,7 +26,8 @@ main {
   text-align: center;
 }
 
-.block__h2 {
+
+.block__h1 {
   font-size: 1.6rem;
   font-weight: 900;
 }
@@ -38,6 +45,7 @@ main {
 .block__p--bold {
   font-size: 1.2rem;
   font-weight: 700;
+  max-width: 500px;
 }
 
 //Portfolio
@@ -47,20 +55,23 @@ img {
 }
 
 .main__portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
+  @include flex-column($gap:40px)
 }
 
 .portfolio__block {
  @include flex-column($gap: 17px);
+ @include decoration--underline($width: 230px, $height: 3px, $top: auto, $bottom: 30px, $color: $black); 
 }
+
 
 .portfolio__link {
   text-decoration: none;
   color: $pink;
   font-weight: 700;
   position: relative;
+}
+.portfolio__link--decoration-underline {
+  @include decoration--underline($width:140px, $height: 3px, $top: 18px, $bottom: auto, $color: $pink);
 }
 
 //arrow for link
@@ -75,33 +86,197 @@ img {
 }
 
 //Latest from Studio
-
-.main__latest-div {
+.main__latest-div--outer {
+  position: relative;
+  padding: 30px 30px 100px 30px;
   background-color: $black;
   color: $white;
-  @include flex-column($gap: 40px);
-  padding: 30px;
-  position: relative;
   
+ 
+
+
+}
+.main__latest-div--inner {
+  
+  @include flex-column($gap: 40px);
+  position: relative;
 }
 
-.main__latest-div div {
-  display: flex;
-  flex-direction: column;
+.latest-div__block {
+  @include flex-column($gap: 20px);
   justify-content: center;
   align-items: center;
-  gap: 10px;
+}
+
+.p-latest-div__heading {
+  padding-bottom: 40px;
 }
 
 
-.latest__block {
-  @include flex-column($gap: 20px);
+//Showreel 
+
+.main__showreel {
+  position: absolute;
+  top: 0px;
+
 }
 
-//Decoration wave
-//extra padding so that the svg doesn't overlap
+//FORM
 
-.main__latest-div div:nth-last-child(2) { 
-  padding-bottom: 50px;
-}
+.start-project-div__form {
+  border: 1px solid $black;
+  background-color: $white;
+  
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  }
 
+  .p-start-project-div__form {
+    
+    position: fixed;
+    top: 25%;
+    left: 0px;
+    right: 0px;
+
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+
+    border: 2px solid $black;
+
+  }
+
+  .form__btn--close {  
+    appearance: none;
+    font-size: 0px;
+    background-image: url("../../images/x--black.svg");
+    
+    background-color: $white;
+    background-position: center;
+    background-size: contain;
+    border: none;
+  }
+
+  .p-form__btn--close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__btn--submit {
+    order: 666;
+    width: 100px;
+  }
+
+  .alert-div {
+    border: 3px solid $pink;
+    font-weight: bolder;
+    background-color: $white;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .p-alert-div {
+    position: fixed;
+    top: 150px;
+    left: 0px;
+    right: 0px;
+
+    margin: auto;
+    width: 200px;
+    height: 50px;
+
+
+  }
+
+  //Media Query
+
+  @media screen and (min-width: 500px) {
+
+
+    main > * {
+      padding: 0px 200px;
+    }
+    .main__block--media-align-start {
+      align-items: start;
+      justify-content: center;
+      gap: 30px;
+      height: 80vh;
+    }
+
+    .block__h1 {
+      font-size: 56px;
+    }
+    
+
+    //portfolio
+    .main__portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px 60px;
+      position: relative;
+    }
+
+    .portfolio__block--decoration-underline-short {
+      @include decoration--underline($width: 230px, $height: 3px, $top: 400px, $bottom: auto, $color: $black);  
+    }
+
+    .block__img-div { 
+      overflow: hidden;
+    }
+    .portfolio__block img {
+      transition: transform .8s ease;
+    }
+
+    .portfolio__block:hover img {
+      transform: scale(1.2);
+    }
+
+   
+    
+    
+    //latest
+     .main__latest-div--outer {
+      
+      padding: 100px 30px 100px 200px;
+    }
+ 
+
+    .main__latest-div--inner {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      padding-bottom: 30px;
+    
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+       */
+    }
+
+    
+    .latest-div__block {
+      min-width: 300px;
+    }
+
+    .p-latest-div__heading {
+      position: absolute;
+      top: 30px;
+      left: 200px;
+    }
+
+    .decoration--scrollbar {
+      @include decoration-scrollbar($size:2px, $foreground-color: $white, $background-color: $gray)
+    }
+
+
+  } 
+
+  

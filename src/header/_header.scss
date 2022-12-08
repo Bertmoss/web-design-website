@@ -43,7 +43,6 @@
   border-radius: 9px;
 }
 
-
 //NAVIGATION
 
 .header__nav {
@@ -52,11 +51,11 @@
   background-color: inherit;
 }
 
-.li__a--top {
-  @include nav-link(var(--header-color))
+.li__a--head {
+  @include nav-link(var(--header-color));
 }
 
-.nav__ul {
+.header-nav__ul {
   @include nav-ul;
   font-size: 23px;
   display: flex;

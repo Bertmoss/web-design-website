@@ -1,0 +1,55 @@
+@use "../general/colors" as *;
+@use "../general/nav" as *;
+@use "../general/svg-icon" as *;
+
+.footer {
+  background-color: $black; 
+  color: $white; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__contact-div {
+  text-align: end;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav__ul {
+  @include nav-ul;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: start;
+}
+
+.li__a--foot {
+  @include nav-link($color: $white);
+  font-size: 0px;
+  position: relative;
+}
+
+.li__a--facebook::after {
+  @include svg-icon($background-image: url("../../images/facebook--white.svg"), $size: 18px);
+  left: -5px;
+}
+
+.li__a--instagram::after {
+  @include svg-icon($background-image: url("../../images/instagram--white.svg"), $size: 18px);
+  left: -5px;
+}
+.li__a--twitter::after {
+  @include svg-icon($background-image: url("../../images/twitter--white.svg"), $size: 18px);
+  left: -5px;
+}
+
+.footer__contact-div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}

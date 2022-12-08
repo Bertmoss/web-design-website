@@ -1,7 +1,31 @@
 @use "./colors" as *;
 
 //decoration underline animation
+@mixin decoration--underline($width, $height, $top, $bottom,  $color) { 
+  position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: $width;//140px;
+    height: $height;
+    transform: scaleX(0); 
+    height: 3px;
+    top: $top;
+    bottom: $bottom;
+    left: 0px;
+    background-color: $color;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+/* 
 .decoration--underline::before {
   content: "";
   position: absolute;
@@ -18,7 +42,8 @@
 .decoration--underline:hover:before {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
+} */
+
 //decoration wave for the latest-div
 
 .decoration--wave {
@@ -40,3 +65,20 @@
 .decoration--wave .shape-fill {
   fill: #FFFFFF;
 }
+
+//decoration scrollbar
+
+@mixin decoration-scrollbar($size, $foreground-color, $background-color) {
+  scrollbar-color: $foreground-color, $background-color;
+  
+    &::-webkit-scrollbar {
+      width: $size;
+      height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+    }
+    &::-webkit-scrollbar-track {
+      background:  $background-color;
+    }
+  }

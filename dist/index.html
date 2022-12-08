@@ -12,121 +12,183 @@
     <header class="header">
       <div class="header-div--top">
         <h2>NAME</h2>
-        <button  class="header-div__btn p-header-div__btn">
+        <button class="header-div__btn p-header-div__btn">
           <span class="p-btn__span--decoration btn__span--decoration"></span>
           <span class="btn__span--decoration p-btn__span--decoration"></span>
           <span class="btn__span--decoration p-btn__span--decoration"></span>
           <span class="btn__span--decoration p-btn__span--decoration"></span>
-        Open Main Menu
+          Open Main Menu
         </button>
       </div>
       <nav aria-label="main menu" class="header__nav hidden">
-        <ul class="nav__ul">
-          <li><a href="http://" class="li__a--top">Work</a></li>
-          <li><a href="http://" class="li__a--top">Services</a></li>
-          <li><a href="http://" class="li__a--top">About</a></li>
-          <li><a href="http://" class="li__a--top">Method</a></li>
-          <li><a href="http://" class="li__a--top">Blog</a></li>
-          <li><a href="http://" class="li__a--top">Contact Us</a></li>
+        <ul class="header-nav__ul">
+          <li><a href="http://" class="li__a--head">Work</a></li>
+          <li><a href="http://" class="li__a--head">Services</a></li>
+          <li><a href="http://" class="li__a--head">About</a></li>
+          <li><a href="http://" class="li__a--head">Method</a></li>
+          <li><a href="http://" class="li__a--head">Blog</a></li>
+          <li><a href="http://" class="li__a--head">Contact Us</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="main__block">
-        <h2 class="block__h2">Web Design Agency</h2>
+      <div class="main__block main__block--media-align-start">
+        <h1 class="block__h1">Web Design Agency</h1>
         <p>Working with brands all over the world</p>
-        <button type="button" class="block__btn">Play Showreel</button>
+        <button type="button" class="block__btn btn--showreel">Play Showreel</button>
       </div>
 
-     <!--  <nav aria-label="middle menu hidden">
+      <!--  <nav aria-label="middle menu hidden">
         <ul>
           <li><a href="http://">Web Design</a></li>
           <li><a href="http://">Branding Agency</a></li>
           <li><a href="http://">Craft CMS</a></li>
         </ul>
       </nav> -->
-      
+
       <div class="main__block">
         <p class="block__p--bold">
           An independent web design & branding agency, who care, build
-          relationships, have industry experience, and win awards
+          relationships, have industry experience, and win awards.
         </p>
       </div>
 
       <div class="main__portfolio">
         <div class="portfolio__block">
-          <img class="img" src=".././images/stock-1--tall.jpg" alt="Stock photo" />
+          <div class="block__img-div">
+          <img
+            src=".././images/stock-1--tall.jpg"
+            alt="Stock photo"
+          />
+        </div>
           <h3>Lorem ipsum dolor sit amet</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="portfolio__block">
-          <img src="../images/stock-3--wide.jpg" alt="Stock photo" />
+          <div class="block__img-div">
+            <img src="../images/stock-3--tall.jpg" alt="Stock photo" />
+          </div>
           <h3>Lorem ipsum dolor sit amet</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="portfolio__block">
-          <img src="../images/stock-2--tall.jpg" alt="Stock photo" />
+          <div class="block__img-div">
+            <img src="../images/stock-2--tall.jpg" alt="Stock photo" />
+          </div>
           <h3>Lorem ipsum dolor sit amet</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div class="portfolio__block">
-          <img src="../images/stock-1--wide.jpg" alt="Stock photo" />
-          <h3>Lorem ipsum dolor sit amet</h3>
+        <div class="portfolio__block portfolio__block--decoration-underline-short">
+          <div class="block__img-div">
+            <img src="../images/stock-1--wide.jpg" alt="Stock photo" />
+          </div>
+          <h3 class="decoration--underline">Lorem ipsum dolor sit amet</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <a class="portfolio__link decoration--underline" href="http://">View our portfolio</a>
+        <a class="portfolio__link portfolio__link--decoration-underline" href="http://"
+          >View our portfolio</a
+        >
       </div>
-
-      <div class="main__latest-div">
-        <h3>Latest from our studio</h3>
-        <div>
-          <img src="/images/stock--latest-tall.jpg" alt="Stock photo of office" />
+      <div class="main__latest-div--outer">
+        <h2 class="p-latest-div__heading">Latest from our studio</h2>
+      <div class="main__latest-div--inner decoration--scrollbar">
+        <div class="latest-div__block">
+          <img
+            src="/images/stock--latest-tall.jpg"
+            alt="Stock photo of office"
+          />
           <h4>Our Culture & Values</h4>
         </div>
-        <div>
-          <img src="/images/stock--latest-2-tall.jpg" alt="Stock photo of office" />
+        <div class="latest-div__block">
+          <img
+            src="/images/stock--latest-2-tall.jpg"
+            alt="Stock photo of office"
+          />
           <h4>Our Charity Work</h4>
         </div>
-        <div>
-          <img src="/images/stock--latest-3-tall.jpg" alt="Stock photo of office" />
+        <div class="latest-div__block">
+          <img
+            src="/images/stock--latest-3-tall.jpg"
+            alt="Stock photo of office"
+          />
           <h4>Client Testimonials</h4>
         </div>
-        <div class="decoration--wave">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-          </svg>
-       </div>
+        <div class="latest-div__block">
+          <img
+            src="/images/stock--latest-4-tall.jpg"
+            alt="Stock photo of office"
+          />
+          <h4>Client Outreach</h4>
+        </div>
+        <div class="latest-div__block">
+          <img
+            src="/images/stock--latest-tall.jpg"
+            alt="Stock photo of office"
+          />
+          <h4>Our Culture & Values</h4>
+        </div>
+        <div class="latest-div__block">
+          <img
+            src="/images/stock--latest-tall.jpg"
+            alt="Stock photo of office"
+          />
+          <h4>Our Culture & Values</h4>
+        </div>
+      </div>
+      <div class="decoration--wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
       </div>
 
-      <div>
+    </div>
+
+      <div class="main__start-project-div">
         <img src="" alt="" />
-        <div>
+        <div class="main__block main__block--media-align-start" >
           <h1>We can't wait to work with you.</h1>
           <p>
             Whether it's a new venture or existing brand, we can help you take
             it to the next level
           </p>
-          <button type="button">Start a Project</button>
+          <button type="button" class="block__btn btn--form">Start a Project</button>
         </div>
       </div>
     </main>
 
-    <footer>
-      <nav aria-label="Social Media Contacts">
-        <h5>Follow Us On Social Media</h5>
-        <ul>
-          <li><a href="http://">Facebook</a></li>
-          <li><a href="http://">Instagram</a></li>
-          <li><a href="http://">Twitter</a></li>
+    <footer class="footer">
+      <nav aria-label="Social Media Contacts" class="footer__nav">
+        <h4>Follow Us:</h4>
+        <ul class="footer-nav__ul">
+          <li>
+            <a href="http://" class="li__a--foot li__a--facebook">Facebook</a>
+          </li>
+          <li>
+            <a href="http://" class="li__a--foot li__a--instagram">Instagram</a>
+          </li>
+          <li>
+            <a href="http://" class="li__a--foot li__a--twitter">Twitter</a>
+          </li>
         </ul>
       </nav>
-      <div>
-        <h5>Telephone</h5>
+      <div class="footer__contact-div">
+        <h4>Telephone</h4>
         <p>666-666-666</p>
-        <h5>Email</h5>
-        <p>notarealemail@gmail.com</p>
-        <h5>Studio Address</h5>
-        <p>NotRealAve 186 2377XX London</p>
+        <h4>Email</h4>
+        <p>notareal@gmail.com</p>
+        <h4>Studio Address</h4>
+        <p>
+          NotRealAve 186<br />
+          2377XX London
+        </p>
       </div>
     </footer>
   </body>
