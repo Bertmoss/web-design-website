@@ -508,6 +508,9 @@ img {
   font-size: 0px;
   position: relative;
 }
+.li__a--foot:hover {
+  filter: invert(41%) sepia(66%) saturate(617%) hue-rotate(314deg) brightness(109%) contrast(87%);
+}
 
 .li__a--facebook::after {
   content: "";
