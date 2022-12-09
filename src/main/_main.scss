@@ -42,6 +42,12 @@ main {
   color: var(--accent);
 }
 
+.block__btn:hover {
+  background-color: $pink;
+  color: $white;
+  transition: 0.6s;
+}
+
 .block__p--bold {
   font-size: 1.2rem;
   font-weight: 700;
@@ -118,8 +124,9 @@ img {
 .main__showreel {
   position: absolute;
   top: 0px;
-
 }
+
+
 
 //FORM
 

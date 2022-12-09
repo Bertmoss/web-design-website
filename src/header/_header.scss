@@ -78,6 +78,11 @@
     position: absolute;
     left: 20px;
   }
+  .p-header-div__heading:hover {
+    opacity: 0.6;
+    transform: scale(0.9);
+    transition: 0.4s;
+  }
   
   .header-div__btn {
   display: none;
@@ -95,27 +100,27 @@
   //Decoration Underline for Navigation
   //work
   .header-nav__ul li:first-of-type {
-    @include decoration--underline(38px, 2px, auto, -5px, $black)
+    @include decoration--underline(38px, 1px, auto, -5px, $black)
   }
   //services
   .header-nav__ul li:nth-of-type(2) {
-    @include decoration--underline(57px, 2px, auto, -5px, $black)
+    @include decoration--underline(57px, 1px, auto, -5px, $black)
   }
   //about
   .header-nav__ul li:nth-of-type(3) {
-    @include decoration--underline(42px, 2px, auto, -5px, $black)
+    @include decoration--underline(42px, 1px, auto, -5px, $black)
   }
   //method
   .header-nav__ul li:nth-of-type(4) {
-    @include decoration--underline(53px, 2px, auto, -5px, $black)
+    @include decoration--underline(53px, 1px, auto, -5px, $black)
   }
   //blog
   .header-nav__ul li:nth-of-type(5) {
-    @include decoration--underline(35px, 2px, auto, -5px, $black)
+    @include decoration--underline(35px, 1px, auto, -5px, $black)
   }
   //contact us 
   .header-nav__ul li:nth-of-type(6) {
-    @include decoration--underline(75px, 2px, auto, -5px, $black)
+    @include decoration--underline(75px, 1px, auto, -5px, $black)
   }
 
 }

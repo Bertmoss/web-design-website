@@ -194,6 +194,11 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     left: 20px;
   }
+  .p-header-div__heading:hover {
+    opacity: 0.6;
+    transform: scale(0.9);
+    transition: 0.4s;
+  }
   .header-div__btn {
     display: none;
   }
@@ -211,7 +216,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     position: absolute;
     width: 38px;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
@@ -231,7 +236,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     position: absolute;
     width: 57px;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
@@ -251,7 +256,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     position: absolute;
     width: 42px;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
@@ -271,7 +276,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     position: absolute;
     width: 53px;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
@@ -291,7 +296,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     position: absolute;
     width: 35px;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
@@ -311,7 +316,7 @@ h1, h2, h3, h4, h5, h6, p {
     content: "";
     position: absolute;
     width: 75px;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
@@ -357,6 +362,12 @@ main {
   font-weight: bolder;
   border: 2px solid var(--accent);
   color: var(--accent);
+}
+
+.block__btn:hover {
+  background-color: #EF5F5B;
+  color: #FFFFFF;
+  transition: 0.6s;
 }
 
 .block__p--bold {
