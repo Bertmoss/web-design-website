@@ -184,6 +184,147 @@ h1, h2, h3, h4, h5, h6, p {
   gap: 30px;
 }
 
+@media screen and (min-width: 500px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .p-header-div__heading {
+    position: absolute;
+    left: 20px;
+  }
+  .header-div__btn {
+    display: none;
+  }
+  .header__nav {
+    display: contents;
+  }
+  .header-nav__ul {
+    flex-direction: row;
+    font-size: 16px;
+  }
+  .header-nav__ul li:first-of-type {
+    position: relative;
+  }
+  .header-nav__ul li:first-of-type::before {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 2px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -5px;
+    left: 0px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .header-nav__ul li:first-of-type:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .header-nav__ul li:nth-of-type(2) {
+    position: relative;
+  }
+  .header-nav__ul li:nth-of-type(2)::before {
+    content: "";
+    position: absolute;
+    width: 57px;
+    height: 2px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -5px;
+    left: 0px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .header-nav__ul li:nth-of-type(2):hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .header-nav__ul li:nth-of-type(3) {
+    position: relative;
+  }
+  .header-nav__ul li:nth-of-type(3)::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 2px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -5px;
+    left: 0px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .header-nav__ul li:nth-of-type(3):hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .header-nav__ul li:nth-of-type(4) {
+    position: relative;
+  }
+  .header-nav__ul li:nth-of-type(4)::before {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 2px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -5px;
+    left: 0px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .header-nav__ul li:nth-of-type(4):hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .header-nav__ul li:nth-of-type(5) {
+    position: relative;
+  }
+  .header-nav__ul li:nth-of-type(5)::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -5px;
+    left: 0px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .header-nav__ul li:nth-of-type(5):hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .header-nav__ul li:nth-of-type(6) {
+    position: relative;
+  }
+  .header-nav__ul li:nth-of-type(6)::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -5px;
+    left: 0px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .header-nav__ul li:nth-of-type(6):hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
 main > * {
   padding: 0px 30px;
 }
@@ -246,7 +387,6 @@ img {
   width: 230px;
   height: 3px;
   transform: scaleX(0);
-  height: 3px;
   top: auto;
   bottom: 30px;
   left: 0px;
@@ -275,7 +415,6 @@ img {
   width: 140px;
   height: 3px;
   transform: scaleX(0);
-  height: 3px;
   top: 18px;
   bottom: auto;
   left: 0px;
@@ -379,7 +518,7 @@ img {
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
 .p-alert-div {
@@ -388,8 +527,9 @@ img {
   left: 0px;
   right: 0px;
   margin: auto;
-  width: 200px;
+  width: 300px;
   height: 50px;
+  padding: 20px;
 }
 
 @media screen and (min-width: 500px) {
@@ -420,7 +560,6 @@ img {
     width: 230px;
     height: 3px;
     transform: scaleX(0);
-    height: 3px;
     top: 400px;
     bottom: auto;
     left: 0px;

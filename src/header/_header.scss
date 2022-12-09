@@ -1,6 +1,7 @@
 @use "../general/colors" as *;
 @use "../general/hamburger-menu" as *;
 @use "../general/nav" as *;
+@use "../general/decoration" as *;
 
 .header {
   background-color: var(--header-background);
@@ -63,4 +64,58 @@
   justify-content: space-around;
   align-items: flex-start;
   gap: 30px;
+}
+
+
+@media screen and (min-width: 500px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .p-header-div__heading {
+    position: absolute;
+    left: 20px;
+  }
+  
+  .header-div__btn {
+  display: none;
+  }
+
+  .header__nav {
+    display: contents;  
+  }
+
+  .header-nav__ul {
+    flex-direction: row;
+    font-size: 16px;
+  }
+
+  //Decoration Underline for Navigation
+  //work
+  .header-nav__ul li:first-of-type {
+    @include decoration--underline(38px, 2px, auto, -5px, $black)
+  }
+  //services
+  .header-nav__ul li:nth-of-type(2) {
+    @include decoration--underline(57px, 2px, auto, -5px, $black)
+  }
+  //about
+  .header-nav__ul li:nth-of-type(3) {
+    @include decoration--underline(42px, 2px, auto, -5px, $black)
+  }
+  //method
+  .header-nav__ul li:nth-of-type(4) {
+    @include decoration--underline(53px, 2px, auto, -5px, $black)
+  }
+  //blog
+  .header-nav__ul li:nth-of-type(5) {
+    @include decoration--underline(35px, 2px, auto, -5px, $black)
+  }
+  //contact us 
+  .header-nav__ul li:nth-of-type(6) {
+    @include decoration--underline(75px, 2px, auto, -5px, $black)
+  }
+
 }
