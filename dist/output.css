@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 :root {
@@ -474,9 +474,42 @@ img {
   padding-bottom: 40px;
 }
 
-.main__showreel {
-  position: absolute;
+.main__showreel--outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.p-main__showreel--outer {
+  position: fixed;
   top: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main__showreel--inner {
+  position: relative;
+}
+
+.p-showreel__img {
+  width: min(90vw, 450px);
+  border-radius: 25px;
+}
+
+.showreel__title {
+  font-size: min(4vw, 32px);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.p-showreel__title {
+  position: absolute;
+  bottom: 15%;
+  margin: auto;
+  padding: 20px;
+  width: max-content;
+  border-radius: 0px 35px 35px 0px;
 }
 
 .start-project-div__form {
@@ -551,7 +584,7 @@ img {
     align-items: start;
     justify-content: center;
     gap: 30px;
-    height: 80vh;
+    height: 90vh;
   }
   .block__h1 {
     font-size: 56px;

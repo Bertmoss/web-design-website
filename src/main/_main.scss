@@ -121,11 +121,43 @@ img {
 
 //Showreel 
 
-.main__showreel {
-  position: absolute;
-  top: 0px;
+.main__showreel--outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-opacity;
 }
 
+.p-main__showreel--outer {
+  position: fixed;
+  top: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main__showreel--inner {
+  position: relative;
+}
+
+.p-showreel__img {
+  width: min(90vw, 450px); 
+  border-radius: 25px;
+}
+
+.showreel__title {
+  font-size: min(4vw, 32px);
+  background: $white-opacity;
+}
+
+.p-showreel__title {
+  position: absolute;
+  bottom: 15%;
+  margin: auto;
+  padding: 20px;
+  width: max-content;
+  border-radius: 0px 35px 35px 0px;
+}
 
 
 //FORM
@@ -211,6 +243,9 @@ img {
   @media screen and (min-width: 500px) {
 
 
+  
+
+
     main > * {
       padding: 0px 200px;
     }
@@ -218,7 +253,7 @@ img {
       align-items: start;
       justify-content: center;
       gap: 30px;
-      height: 80vh;
+      height: 90vh;
     }
 
     .block__h1 {
