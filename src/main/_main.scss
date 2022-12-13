@@ -14,21 +14,28 @@ main > * {
 
 main {
   @include flex-column($gap: 40px);
+  position: relative;
 }
 
+.main__block--first {
+  height: 85vh;
+}
 
-
+.block__cover-img {
+  max-width: 500px;
+}
 
 .main__block {
+  position: relative;
   @include flex-column($gap: 10px);
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;//space-around;
   text-align: center;
 }
 
 
 .block__h1 {
-  font-size: 1.6rem;
+  font-size: 7vw;
   font-weight: 900;
 }
 
@@ -66,7 +73,7 @@ img {
 
 .portfolio__block {
  @include flex-column($gap: 17px);
- @include decoration--underline($width: 230px, $height: 3px, $top: auto, $bottom: 30px, $color: $black); 
+ @include decoration--underline($width: 230px, $height: 3px, $top: auto, $bottom: 30px, $left: 0px, $color: $black); 
 }
 
 
@@ -77,7 +84,7 @@ img {
   position: relative;
 }
 .portfolio__link--decoration-underline {
-  @include decoration--underline($width:140px, $height: 3px, $top: 18px, $bottom: auto, $color: $pink);
+  @include decoration--underline($width:140px, $height: 3px, $top: 18px, $bottom: auto, $left: 0px, $color: $pink);
 }
 
 //arrow for link
@@ -182,9 +189,10 @@ img {
 
     margin: auto;
     width: 300px;
-    padding: 20px;
+    padding: 45px 10px;
 
     border: 2px solid $black;
+    border-radius: 15px;
 
   }
 
@@ -201,11 +209,15 @@ img {
 
   .p-form__btn--close {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
 
     width: 20px;
     height: 20px;
+  }
+
+  .p-form__btn--close:hover {
+    scale: 1.1;
   }
 
   .form__btn--submit {
@@ -240,24 +252,35 @@ img {
 
   //Media Query
 
-  @media screen and (min-width: 500px) {
-
-
-  
+  @media screen and (min-width: 893px) {
 
 
     main > * {
       padding: 0px 200px;
     }
-    .main__block--media-align-start {
+    .main__block--first {
       align-items: start;
       justify-content: center;
       gap: 30px;
-      height: 90vh;
     }
 
     .block__h1 {
       font-size: 56px;
+      padding: 10px;
+      border-radius: 35px;
+      background-color: $white-opacity;
+    }
+
+
+    .block__cover-img {
+      position: absolute;
+      
+      top: 50px;
+  
+      right: 50px;
+      padding: 0px;
+      z-index: -1;
+
     }
     
 
@@ -270,18 +293,18 @@ img {
     }
 
     .portfolio__block--decoration-underline-short {
-      @include decoration--underline($width: 230px, $height: 3px, $top: 400px, $bottom: auto, $color: $black);  
+      @include decoration--underline($width: 230px, $height: 3px, $top: 400px, $bottom: auto, $left: 0px, $color: $black);  
     }
 
     .block__img-div { 
       overflow: hidden;
     }
-    .portfolio__block img {
+    .portfolio__block img, .latest-div__block img {
       transition: transform .8s ease;
     }
 
-    .portfolio__block:hover img {
-      transform: scale(1.2);
+    .portfolio__block:hover img, .latest-div__block:hover img {
+      transform: scale(1.1);
     }
 
    
@@ -299,14 +322,17 @@ img {
       flex-direction: row;
       overflow-x: auto;
       padding-bottom: 30px;
-    
-      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-       */
     }
 
     
     .latest-div__block {
       min-width: 300px;
+      position: relative;
+    }
+
+    .latest-div__block--decoration-underline {
+      @include decoration--underline($width: 160px, $height: 1px, $top: auto, $bottom: -7px, $left: 70px, $color: $white);
+
     }
 
     .p-latest-div__heading {

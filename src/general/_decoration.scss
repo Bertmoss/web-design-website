@@ -1,7 +1,7 @@
 @use "./colors" as *;
 
 //decoration underline animation
-@mixin decoration--underline($width, $height, $top, $bottom,  $color) { 
+@mixin decoration--underline($width, $height, $top, $bottom, $left,  $color) { 
   position: relative;
 
   &::before {
@@ -12,7 +12,7 @@
     transform: scaleX(0); 
     top: $top;
     bottom: $bottom;
-    left: 0px;
+    left: $left;
     background-color: $color;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -23,25 +23,6 @@
     transform-origin: bottom left;
   }
 }
-
-/* 
-.decoration--underline::before {
-  content: "";
-  position: absolute;
-  width: 140px;
-  transform: scaleX(0); 
-  height: 3px;
-  top: 18px;
-  left: 0px;
-  background-color: $pink;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.decoration--underline:hover:before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-} */
 
 //decoration wave for the latest-div
 

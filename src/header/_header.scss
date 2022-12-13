@@ -49,7 +49,7 @@
 .header__nav {
   width: 100vw;
   height: 100vh;
-  background-color: inherit;
+  background-color: inherit; 
 }
 
 .li__a--head {
@@ -67,7 +67,7 @@
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 875px) {
   .header {
     flex-direction: row;
     align-items: center;
@@ -100,27 +100,27 @@
   //Decoration Underline for Navigation
   //work
   .header-nav__ul li:first-of-type {
-    @include decoration--underline(38px, 1px, auto, -5px, $black)
+    @include decoration--underline(38px, 1px, auto, -5px, 1px, $black)
   }
   //services
   .header-nav__ul li:nth-of-type(2) {
-    @include decoration--underline(57px, 1px, auto, -5px, $black)
+    @include decoration--underline(57px, 1px, auto, -5px, 1px, $black)
   }
   //about
   .header-nav__ul li:nth-of-type(3) {
-    @include decoration--underline(42px, 1px, auto, -5px, $black)
+    @include decoration--underline(42px, 1px, auto, -5px, 1px, $black)
   }
   //method
   .header-nav__ul li:nth-of-type(4) {
-    @include decoration--underline(53px, 1px, auto, -5px, $black)
+    @include decoration--underline(53px, 1px, auto, -5px, 1px, $black)
   }
   //blog
   .header-nav__ul li:nth-of-type(5) {
-    @include decoration--underline(35px, 1px, auto, -5px, $black)
+    @include decoration--underline(35px, 1px, auto, -5px, 1px, $black)
   }
   //contact us 
   .header-nav__ul li:nth-of-type(6) {
-    @include decoration--underline(75px, 1px, auto, -5px, $black)
+    @include decoration--underline(75px, 1px, auto, -5px, 1px, $black)
   }
 
 }

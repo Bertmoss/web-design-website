@@ -2,10 +2,14 @@
   display: none !important;
 }
 
+.hidden-nav {
+  display: none;
+}
+
 :root {
   --header-background: #FFFFFF;
   --header-color: #000000;
-  --accent: #EF5F5B;
+  --accent:#FF6857;
 }
 
 .dark {
@@ -21,24 +25,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0px;
 }
 
-/* 
-.decoration--underline::before {
-  content: "";
-  position: absolute;
-  width: 140px;
-  transform: scaleX(0); 
-  height: 3px;
-  top: 18px;
-  left: 0px;
-  background-color: $pink;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.decoration--underline:hover:before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-} */
 .decoration--wave {
   position: absolute;
   bottom: 0;
@@ -184,7 +170,7 @@ h1, h2, h3, h4, h5, h6, p {
   gap: 30px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 875px) {
   .header {
     flex-direction: row;
     align-items: center;
@@ -220,7 +206,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
-    left: 0px;
+    left: 1px;
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -240,7 +226,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
-    left: 0px;
+    left: 1px;
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -260,7 +246,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
-    left: 0px;
+    left: 1px;
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -280,7 +266,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
-    left: 0px;
+    left: 1px;
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -300,7 +286,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
-    left: 0px;
+    left: 1px;
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -320,7 +306,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scaleX(0);
     top: auto;
     bottom: -5px;
-    left: 0px;
+    left: 1px;
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -338,19 +324,29 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  position: relative;
+}
+
+.main__block--first {
+  height: 85vh;
+}
+
+.block__cover-img {
+  max-width: 500px;
 }
 
 .main__block {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
 }
 
 .block__h1 {
-  font-size: 1.6rem;
+  font-size: 7vw;
   font-weight: 900;
 }
 
@@ -365,7 +361,7 @@ main {
 }
 
 .block__btn:hover {
-  background-color: #EF5F5B;
+  background-color: #FF6857;
   color: #FFFFFF;
   transition: 0.6s;
 }
@@ -412,7 +408,7 @@ img {
 
 .portfolio__link {
   text-decoration: none;
-  color: #EF5F5B;
+  color: #FF6857;
   font-weight: 700;
   position: relative;
 }
@@ -429,7 +425,7 @@ img {
   top: 18px;
   bottom: auto;
   left: 0px;
-  background-color: #EF5F5B;
+  background-color: #FF6857;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -478,7 +474,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .p-main__showreel--outer {
@@ -500,7 +496,7 @@ img {
 
 .showreel__title {
   font-size: min(4vw, 32px);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .p-showreel__title {
@@ -529,8 +525,9 @@ img {
   right: 0px;
   margin: auto;
   width: 300px;
-  padding: 20px;
+  padding: 45px 10px;
   border: 2px solid #000000;
+  border-radius: 15px;
 }
 
 .form__btn--close {
@@ -545,10 +542,14 @@ img {
 
 .p-form__btn--close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   width: 20px;
   height: 20px;
+}
+
+.p-form__btn--close:hover {
+  scale: 1.1;
 }
 
 .form__btn--submit {
@@ -557,7 +558,7 @@ img {
 }
 
 .alert-div {
-  border: 3px solid #EF5F5B;
+  border: 3px solid #FF6857;
   font-weight: bolder;
   background-color: #FFFFFF;
   display: flex;
@@ -576,18 +577,27 @@ img {
   padding: 20px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 893px) {
   main > * {
     padding: 0px 200px;
   }
-  .main__block--media-align-start {
+  .main__block--first {
     align-items: start;
     justify-content: center;
     gap: 30px;
-    height: 90vh;
   }
   .block__h1 {
     font-size: 56px;
+    padding: 10px;
+    border-radius: 35px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .block__cover-img {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 0px;
+    z-index: -1;
   }
   .main__portfolio {
     display: grid;
@@ -618,11 +628,11 @@ img {
   .block__img-div {
     overflow: hidden;
   }
-  .portfolio__block img {
+  .portfolio__block img, .latest-div__block img {
     transition: transform 0.8s ease;
   }
-  .portfolio__block:hover img {
-    transform: scale(1.2);
+  .portfolio__block:hover img, .latest-div__block:hover img {
+    transform: scale(1.1);
   }
   .main__latest-div--outer {
     padding: 100px 30px 100px 200px;
@@ -632,11 +642,30 @@ img {
     flex-direction: row;
     overflow-x: auto;
     padding-bottom: 30px;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-     */
   }
   .latest-div__block {
     min-width: 300px;
+    position: relative;
+  }
+  .latest-div__block--decoration-underline {
+    position: relative;
+  }
+  .latest-div__block--decoration-underline::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 1px;
+    transform: scaleX(0);
+    top: auto;
+    bottom: -7px;
+    left: 70px;
+    background-color: #FFFFFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .latest-div__block--decoration-underline:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   .p-latest-div__heading {
     position: absolute;
