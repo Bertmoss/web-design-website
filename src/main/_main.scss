@@ -380,12 +380,16 @@ img {
       left: 200px;
     }
 
+    .latest-div__block--minimize {
+      display: flex;
+    }
+
     .latest-div__btn-more {
       display: none;
     }
 
     .decoration--scrollbar {
-      @include decoration-scrollbar($size:2px, $foreground-color: $white, $background-color: $gray)
+      @include decoration-scrollbar($size:3px, $foreground-color: $white, $background-color: $gray)
     }
 
 

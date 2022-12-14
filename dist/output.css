@@ -711,6 +711,9 @@ img {
     top: 30px;
     left: 200px;
   }
+  .latest-div__block--minimize {
+    display: flex;
+  }
   .latest-div__btn-more {
     display: none;
   }
@@ -718,8 +721,8 @@ img {
     scrollbar-color: #FFFFFF, #808080;
   }
   .decoration--scrollbar::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+    width: 3px;
+    height: 3px;
   }
   .decoration--scrollbar::-webkit-scrollbar-thumb {
     background: #FFFFFF;
