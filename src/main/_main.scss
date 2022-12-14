@@ -124,6 +124,33 @@ img {
 .p-latest-div__heading {
   padding-bottom: 40px;
 }
+
+.latest-div__block--minimize {
+  display: none;
+}
+
+.latest-div__btn-more {
+  appearance: none;
+  background-color: inherit;
+  border: none;
+  background-image: url("../../images/more-horizonta--whitel.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 0px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+}
+
+.latest-div__btn-more:active {
+  width: 37px;
+  height: 37px;
+}
+
+
 //start-project-div
 .main__start-project-div {
   @include flex-column($gap: 0px);
@@ -353,9 +380,15 @@ img {
       left: 200px;
     }
 
+    .latest-div__btn-more {
+      display: none;
+    }
+
     .decoration--scrollbar {
       @include decoration-scrollbar($size:2px, $foreground-color: $white, $background-color: $gray)
     }
+
+
   } 
 
   @media screen and (min-width:1300px) {

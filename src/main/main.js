@@ -285,3 +285,17 @@ formBtn.addEventListener("click", () => {
     ? true
     : main.appendChild(formDisplay.appendInputsLabels(startProjectForm));
 });
+
+
+
+//latest-div btn
+
+let latestBtn = document.querySelector(".latest-div__btn-more");
+let blocksMinimize = document.querySelectorAll(".latest-div__block--minimize")
+
+latestBtn.addEventListener("click", () => {
+  blocksMinimize.forEach(block => {
+    block.setAttribute("style", "display: block");
+  })
+  latestBtn.setAttribute("style", "display: none");
+})

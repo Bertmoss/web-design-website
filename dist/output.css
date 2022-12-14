@@ -470,6 +470,31 @@ img {
   padding-bottom: 40px;
 }
 
+.latest-div__block--minimize {
+  display: none;
+}
+
+.latest-div__btn-more {
+  appearance: none;
+  background-color: inherit;
+  border: none;
+  background-image: url("../../images/more-horizonta--whitel.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 0px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+}
+
+.latest-div__btn-more:active {
+  width: 37px;
+  height: 37px;
+}
+
 .main__start-project-div {
   display: flex;
   flex-direction: column;
@@ -686,6 +711,9 @@ img {
     top: 30px;
     left: 200px;
   }
+  .latest-div__btn-more {
+    display: none;
+  }
   .decoration--scrollbar {
     scrollbar-color: #FFFFFF, #808080;
   }
@@ -719,6 +747,7 @@ img {
   }
 }
 .footer {
+  position: relative;
   background-color: #000000;
   color: #FFFFFF;
   display: flex;
@@ -796,6 +825,24 @@ img {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  width: fit-content;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution a {
+  color: #FFFFFF;
 }
 
 body {
