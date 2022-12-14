@@ -470,6 +470,12 @@ img {
   padding-bottom: 40px;
 }
 
+.p-start-project-div__img {
+  width: min(100%, 500px);
+  margin: auto;
+  display: block;
+}
+
 .main__showreel--outer {
   display: flex;
   align-items: center;
@@ -684,6 +690,21 @@ img {
   }
   .decoration--scrollbar::-webkit-scrollbar-track {
     background: #808080;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main__start-project-div {
+    display: flex;
+    gap: 50px;
+  }
+  .p-start-project-div__img {
+    margin: 0px;
+  }
+  .start-project-div__block {
+    align-items: start;
+    gap: 25px;
+    width: 400px;
+    text-align: start;
   }
 }
 .footer {

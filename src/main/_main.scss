@@ -124,7 +124,13 @@ img {
 .p-latest-div__heading {
   padding-bottom: 40px;
 }
+//start-project-div
 
+.p-start-project-div__img {
+  width: min(100%, 500px);
+  margin: auto;
+  display: block;
+}
 
 //Showreel 
 
@@ -344,8 +350,25 @@ img {
     .decoration--scrollbar {
       @include decoration-scrollbar($size:2px, $foreground-color: $white, $background-color: $gray)
     }
-
-
   } 
+
+  @media screen and (min-width:1300px) {
+        //start-project-div
+
+        .main__start-project-div {
+          display: flex;
+          gap: 50px;
+        }
+        .p-start-project-div__img {
+          margin: 0px
+        }
+        .start-project-div__block {
+          align-items: start;
+          gap: 25px;
+          width: 400px;
+          text-align: start;
+        }
+    
+  }
 
   
