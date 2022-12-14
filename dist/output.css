@@ -470,10 +470,18 @@ img {
   padding-bottom: 40px;
 }
 
+.main__start-project-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
 .p-start-project-div__img {
   width: min(100%, 500px);
-  margin: auto;
-  display: block;
+  height: auto;
 }
 
 .main__showreel--outer {
@@ -694,11 +702,14 @@ img {
 }
 @media screen and (min-width: 1300px) {
   .main__start-project-div {
-    display: flex;
+    flex-direction: row;
     gap: 50px;
+    height: 80vh;
   }
   .p-start-project-div__img {
     margin: 0px;
+    height: auto;
+    width: min(60%, 700px);
   }
   .start-project-div__block {
     align-items: start;
