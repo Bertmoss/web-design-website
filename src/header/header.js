@@ -1,15 +1,11 @@
-//Hamburger Menu Btn/* 
-let btn = document.querySelector(".header-div__btn");
-let nav = document.querySelector(".header__nav");
-let root = document.querySelector(":root");
+// Hamburger Menu Btn
 
-
+const btn = document.querySelector(".header-div__btn");
+const nav = document.querySelector(".header__nav");
+const root = document.querySelector(":root");
 
 btn.addEventListener("click", () => {
   btn.classList.toggle("open");
   nav.classList.toggle("hidden-nav");
-  root.classList.toggle("dark");
-}) 
-
-
-
+  root.classList.toggle('dark');
+});
